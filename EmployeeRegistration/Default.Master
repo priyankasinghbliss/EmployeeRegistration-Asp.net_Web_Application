@@ -1,0 +1,52 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Default.master.cs" Inherits="EmployeeRegistration.Default" %>
+
+<%@ Register Src="~/Header.ascx" TagName="Head" TagPrefix="emp" %>
+<%@ Register Src="~/Footer.ascx" TagName="Foot" TagPrefix="emp" %>
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <script src="jquery.js"></script>
+    <link href="menu.css" rel="stylesheet" />
+    <script src="menu.js"></script>
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <table>
+                <tr>
+                    <td>
+                        <emp:Head ID="Header1" runat="server"></emp:Head>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div id="menu">
+                            <ul class="menu">
+                                <li><a href="Employee_Registration.aspx" class="parent"><span>Sign Up</span></a></li>
+                                <li><a href="LogIn.aspx"><span>Sign In</span></a></li>
+                                <li><a href="#"><span>Help</span></a></li>
+                                <li class="last"><a href="#"><span>Contacts</span></a></li>
+                            </ul>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                        </asp:ContentPlaceHolder>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <emp:Foot ID="Foot1" runat="server"></emp:Foot>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </form>
+</body>
+</html>

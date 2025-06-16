@@ -1,0 +1,75 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="User.master.cs" Inherits="EmployeeRegistration.User" %>
+
+<%@ Register Src="~/Header.ascx" TagName="Head" TagPrefix="emp" %>
+<%@ Register Src="~/Footer.ascx" TagName="Foot" TagPrefix="emp" %>
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <script src="jquery.js"></script>
+    <link href="menu.css" rel="stylesheet" />
+    <script src="menu.js"></script>
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <table>
+                <tr>
+                    <td>
+                        <emp:Head ID="Header1" runat="server"></emp:Head>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div id="menu">
+                            <ul class="menu">
+                                <li><a href="Home.aspx"><span>Home</span></a></li>
+                                <li><a href="#" class="parent"><span>Settings</span></a>
+                                    <div>
+                                        <ul>
+                                            <li><a href="ChangePassword.aspx"><span>Change Password</span></a></li>
+                                            <li><a href="Employee_Add.aspx"><span>Add Data</span></a></li>
+                                            <li><a href="Employee_Show.aspx"><span>Show Database</span></a></li>
+                                            <li><a href="#" class="parent"><span>Masters</span></a>
+                                                <div>
+                                                    <ul>
+                                                        <li><a href="Add_Gender.aspx"><span>Gender</span></a></li>
+                                                        <li><a href="Add_MaritalStatus.aspx"><span>Marital Status</span></a></li>
+                                                        <li><a href="Add_BloodGroup.aspx"><span>Blood Group</span></a></li>
+                                                        <li><a href="Add_Country.aspx"><span>Country</span></a></li>
+                                                        <li><a href="Add_State.aspx"><span>State</span></a></li>
+                                                        <li><a href="Add_City.aspx"><span>City</span></a></li>
+                                                        <li><a href="Add_Department.aspx"><span>Department</span></a></li>
+                                                        <li><a href="Add_Designation.aspx"><span>Designation</span></a></li>
+                                                    </ul>
+                                                </div>
+                                            </li>
+                                            <li><a href="#"><span>Help</span></a></li>
+                                            <li><a href="#"><span>Contacts</span></a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class="last"><a href="Logout.aspx"><span>Log Out</span></a></li>
+                            </ul>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                        </asp:ContentPlaceHolder>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <emp:Foot ID="Foot1" runat="server"></emp:Foot>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </form>
+</body>
+</html>
